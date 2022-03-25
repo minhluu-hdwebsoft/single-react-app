@@ -1,0 +1,22 @@
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__content {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.demo-redux__card {
+  border-radius: 10px;
+  border: 1px solid black;
+  text-align: center;
+  padding: 30px;
+  // width: 400px;
+}

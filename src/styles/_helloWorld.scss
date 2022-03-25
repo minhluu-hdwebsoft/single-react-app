@@ -1,0 +1,51 @@
+$curve: 20px;
+@mixin glassmorphism {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.box-center {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card {
+  border: solid 1px;
+  position: relative;
+  display: block;
+  height: 300px;
+  width: 200px;
+  border-radius: $curve;
+  overflow: hidden;
+  text-decoration: none;
+  &:hover {
+    .card__content {
+      transform: translateY(0);
+    }
+    .card__image {
+      height: 100%;
+    }
+  }
+  .card__image {
+    height: 120%;
+    transition: 0.3s ease-in-out;
+  }
+  .card__content {
+    @include glassmorphism;
+    padding: 20px;
+    position: absolute;
+    height: 150px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    border-radius: calc($curve/2);
+    transform: translateY(60%);
+    transition: 0.3s ease-in-out;
+  }
+}
